@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFlow - Nutrisi Seimbang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfdfa; color: #333; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .bg-nutri-dark { background-color: #1d3124; }
+        .text-nutri-green { color: #5a7d3c; }
+        
+        /* Custom Styling agar mirip gambar */
+        .hero-section { background: linear-gradient(to bottom, #ffffff, #fcfdfa); }
+        .btn-outline { border: 1.5px solid #1d3124; transition: all 0.3s; }
+        .btn-outline:hover { background: #1d3124; color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-nutri-dark text-white py-4 px-6 md:px-12 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold serif tracking-tight">NutriFlow</h1>
+            
+            <ul class="hidden md:flex space-x-8 text-sm font-light opacity-90">
+                <li><a href="#" class="hover:text-green-300">Menu</a></li>
+                <li><a href="#" class="hover:text-green-300"></a>Tentang Kami</li>
+                <li><a href="#" class="hover:text-green-300">Paket Katering</a></li>
+                <li><a href="#" class="hover:text-green-300">Testimoni</a></li>
+                <li><a href="#" class="hover:text-green-300">Kontak</a></li>
+            </ul> 
+
+            <div class="flex items-center space-x-5">
+                <i class="fas fa-search cursor-pointer text-lg"></i>
+                <div class="relative">
+                    <i class="fas fa-shopping-cart cursor-pointer text-lg"></i>
+                    <span class="absolute -top-2 -right-2 bg-green-600 text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold">3</span>
+                </div>
+                <i class="fas fa-user-circle text-2xl cursor-pointer"></i>
+                <button id="menu-btn" class="md:hidden focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden flex flex-col space-y-4 mt-4 bg-[#243b2c] p-6 rounded-xl md:hidden">
+            <a href="#" class="border-b border-gray-600 pb-2">Menu</a>
+            <a href="#" class="border-b border-gray-600 pb-2">Tentang Kami</a>
+            <a href="#" class="border-b border-gray-600 pb-2">Paket Katering</a>
+            <a href="#" class="border-b border-gray-600 pb-2">Testimoni</a>
+            <a href="#" class="border-b border-gray-600 pb-2">Kontak</a>
+        </div>
+    </nav>
+
+    <section class="hero-section pt-12 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
+            <div class="z-10 order-2 md:order-1">
+                <h2 class="text-7xl md:text-[100px] serif text-nutri-dark leading-tight mb-2">NutriFlow</h2>
+                <p class="text-xl md:text-2xl font-light text-gray-700 mb-10 tracking-wide">Nutrisi Seimbang, Tanpa Perlu Ribet.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="btn-outline px-8 py-3 rounded-full font-semibold text-nutri-dark">Lihat Paket Menu</a>
+                    <a href="https://wa.me/088224113140" class="bg-nutri-dark text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:opacity-90">
+                        <i class="fab fa-whatsapp text-xl"></i> Pesan Via WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end order-1 md:order-2 mb-10 md:mb-0">
+                <img src="backgroundmakanan.jpg" 
+                     alt="Bowl" class="w-72 h-72 md:w-[550px] md:h-[550px] object-cover rounded-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] border-[12px] border-white">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-6 text-nutri-dark">Kenapa NutriFlow Berbeda?</h3>
+            <p class="text-gray-600 leading-relaxed mb-12">
+                Di NutriFlow, kami percaya bahwa makanan sehat tidak harus terasa membosankan. Kami menggabungkan ilmu nutrisi modern dengan cita rasa kuliner lokal dan internasional. Setiap box makanan kami:
+            </p>
+            
+            <div class="grid gap-6 text-left max-w-lg mx-auto">
+                <div class="flex items-center gap-5 group border-b border-gray-100 pb-4">
+                    <div class="w-12 h-12 flex items-center justify-center border border-nutri-dark rounded-lg">
+                        <i class="fas fa-calculator text-nutri-dark"></i>
+                    </div>
+                    <p class="text-[15px]"><span class="font-bold uppercase text-xs tracking-tighter">Dihitung Kalorinya:</span> Cocok untuk diet atau maintenance berat badan.</p>
+                </div>
+                <div class="flex items-center gap-5 group border-b border-gray-100 pb-4">
+                    <div class="w-12 h-12 flex items-center justify-center border border-nutri-dark rounded-lg">
+                        <i class="fas fa-seedling text-nutri-dark"></i>
+                    </div>
+                    <p class="text-[15px]"><span class="font-bold uppercase text-xs tracking-tighter">Bahan Lokal Organik:</span> Kami bekerja sama langsung dengan petani lokal.</p>
+                </div>
+                <div class="flex items-center gap-5 group pb-4">
+                    <div class="w-12 h-12 flex items-center justify-center border border-nutri-dark rounded-lg">
+                        <i class="fas fa-leaf text-nutri-dark"></i>
+                    </div>
+                    <p class="text-[15px]"><span class="font-bold uppercase text-xs tracking-tighter">Tanpa MSG & Pengawet:</span> Rasa gurih alami dari rempah pilihan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-16 text-nutri-dark">Menu Unggulan</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-[2.5rem] shadow-sm overflow-hidden hover:shadow-2xl transition duration-500">
+                    <img src="leanbasilchiken.jpg" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg">Lean Basil Chicken</h4>
+                        <p class="text-[11px] text-gray-400 mt-2 mb-6 leading-relaxed">Dada ayam panggang dengan saus pesto, nasi merah, dan buncis organic.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-xl">Rp 45.000</span>
+                            <button class="bg-nutri-dark text-white w-10 h-10 rounded-xl flex items-center justify-center"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[2.5rem] shadow-sm overflow-hidden hover:shadow-2xl transition duration-500">
+                    <img src="salmon.jpg" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg">Salmon Mentai Fit</h4>
+                        <p class="text-[11px] text-gray-400 mt-2 mb-6 leading-relaxed">Salmon panggang / low-calorie sauce dengan kentang baby dan edamame.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-xl">Rp 65.000</span>
+                            <button class="bg-nutri-dark text-white w-10 h-10 rounded-xl flex items-center justify-center"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[2.5rem] shadow-sm overflow-hidden hover:shadow-2xl transition duration-500">
+                    <img src="tempehpowerbowl.jpg" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg">Tempeh Power Bowl</h4>
+                        <p class="text-[11px] text-gray-400 mt-2 mb-6 leading-relaxed">Tempe bakar, quinoa, sayuran, dan sambal tanpa minyak.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-xl">Rp 38.000</span>
+                            <button class="bg-nutri-dark text-white w-10 h-10 rounded-xl flex items-center justify-center"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[2.5rem] shadow-sm overflow-hidden hover:shadow-2xl transition duration-500">
+                    <img src="beefstir-fryshora.jpg" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg">Beef Stir-fry Shora</h4>
+                        <p class="text-[11px] text-gray-400 mt-2 mb-6 leading-relaxed">Irisan daging sapi rendah lemak dengan paprika dan zucchini.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-xl">Rp 55.000</span>
+                            <button class="bg-nutri-dark text-white w-10 h-10 rounded-xl flex items-center justify-center"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-16 text-nutri-dark">Apa Kata Mereka?</h3>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="bg-gray-50 p-10 rounded-[2rem] flex gap-6 items-start relative">
+                    <img src="fotocewe.jpg" class="w-20 h-20 rounded-full shadow-lg">
+                    <div>
+                        <div class="text-yellow-500 text-sm mb-3">★★★★★</div>
+                        <p class="text-sm italic text-gray-600 mb-4 leading-loose">"Baru kali ini ikut katering diet yang rasanya juara. Menu-menunya enak banget, jadi nggak gampang bosen."</p>
+                        <div class="font-bold text-nutri-dark">Sarah Larasati</div>
+                        <div class="text-[10px] text-gray-400 uppercase tracking-widest">Pichorie</div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-[2rem] flex gap-6 items-start relative">
+                    <img src="fotocowo.jpg" class="w-20 h-20 rounded-full shadow-lg">
+                    <div>
+                        <div class="text-yellow-500 text-sm mb-3">★★★★★</div>
+                        <p class="text-sm italic text-gray-600 mb-4 leading-loose">"Sangat membantu gaya hidup yang sehat dengan nutrisi terukur. Menu-menunya kreatif, mantap!"</p>
+                        <div class="font-bold text-nutri-dark">Wiliam Pratama</div>
+                        <div class="text-[10px] text-gray-400 uppercase tracking-widest">Ficolonut</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-nutri-dark text-white pt-20 pb-10 relative overflow-hidden">
+        
+        <div class="absolute right-[-30px] bottom-[-20px] opacity-15 pointer-events-none scale-125 rotate-[-15deg]">
+            <svg width="300" height="300" viewBox="0 0 512 512" fill="#94a3b8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M432 64s-48 0-112 48c-33.1 24.8-67.6 69.1-88 112-20.4-42.9-54.9-87.2-88-112-64-48-112-48-112-48 0 0 16 112 112 176 33.1 22 75.9 32 112 32v176h48V272c36.1 0 78.9-10 112-32 96-64 112-176 112-176z"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-12 grid md:grid-cols-3 gap-16 relative z-10">
+            <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <i class="fas fa-map-marker-alt text-xl text-green-400"></i>
+                    <p class="text-xs leading-relaxed opacity-80">Jl. Hijau Asri No. 12,<br>Kebayoran Baru, Jakarta Selatan.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fab fa-whatsapp text-xl text-green-400"></i>
+                    <a href="https://wa.me/088224113140" target="_blank" class="text-xs opacity-80 hover:opacity-100 transition">0882-2411-3140</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-envelope text-xl text-green-400"></i>
+                    <a href="mailto:hello@billabiloll.id" class="text-xs opacity-80 hover:opacity-100 transition">hello@billabiloll.id</a>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold border-b border-gray-600 pb-2 inline-block text-sm tracking-widest">MEDIA SOSIAL</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://instagram.com/bilaabilol.ID" target="_blank" class="flex items-center gap-4 text-xs opacity-80 hover:text-green-400 transition">
+                        <i class="fab fa-instagram text-xl"></i> @bilaabilol.ID
+                    </a>
+                    <a href="https://tiktok.com/@billabilol" target="_blank" class="flex items-center gap-4 text-xs opacity-80 hover:text-green-400 transition">
+                        <i class="fab fa-tiktok text-xl"></i> @billabilol
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold border-b border-gray-600 pb-2 inline-block text-sm tracking-widest">JAM OPERASIONAL</h4>
+                <div class="flex items-start gap-4">
+                    <i class="fas fa-clock text-xl text-green-400"></i>
+                    <p class="text-xs leading-relaxed opacity-80">Senin – Sabtu<br>(08.00 – 16.00 WIB)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-16 pt-8 border-t border-white/5 opacity-40 text-[10px] tracking-[0.2em]">
+            &copy; 2026 NUTRIFLOW INDONESIA. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Menutup menu saat link diklik (untuk UX yang lebih baik)
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
